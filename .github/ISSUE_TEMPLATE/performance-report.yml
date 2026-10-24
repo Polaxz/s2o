@@ -1,0 +1,89 @@
+name: "Performance report"
+description: "Share FPS results so s2o can be tuned for more GPUs"
+title: "[Report] GPU / profile"
+labels: ["performance-report"]
+body:
+  - type: dropdown
+    id: profile
+    attributes:
+      label: "s2o profile"
+      options:
+        - "Lumen (recommended)"
+        - "Lumen Lite"
+        - "No Lumen"
+        - "Stock (no Engine.ini)"
+    validations:
+      required: true
+
+  - type: input
+    id: gpu
+    attributes:
+      label: "GPU and VRAM"
+      placeholder: "GTX 1050 Ti 4GB"
+    validations:
+      required: true
+
+  - type: input
+    id: cpu
+    attributes:
+      label: "CPU"
+      placeholder: "Ryzen 5 2600"
+    validations:
+      required: true
+
+  - type: input
+    id: res
+    attributes:
+      label: "Resolution and TSR scale"
+      placeholder: "1080p, 50%"
+    validations:
+      required: true
+
+  - type: input
+    id: still
+    attributes:
+      label: "FPS standing still (avg / 1% low)"
+      placeholder: "34 / 22"
+    validations:
+      required: true
+
+  - type: input
+    id: moving
+    attributes:
+      label: "FPS moving (avg / 1% low)"
+      placeholder: "31 / 16"
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: "Where in the game"
+      placeholder: "Starting area, kelp forest, base..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issues
+    attributes:
+      label: "Visual issues?"
+      multiple: true
+      options:
+        - "None"
+        - "Lighting pops in/out"
+        - "Shadows pop in/out"
+        - "Blurry textures"
+        - "Flicker/shimmer"
+        - "Green water reflections"
+        - "Too dark"
+        - "Washed out"
+        - "Stutter"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes / screenshots"
+    validations:
+      required: false
