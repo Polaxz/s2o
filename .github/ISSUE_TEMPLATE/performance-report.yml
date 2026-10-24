@@ -11,7 +11,7 @@ body:
         - "Lumen (recommended)"
         - "Lumen Lite"
         - "No Lumen"
-        - "Stock (no Engine.ini)"
+        - "Stock (no custom Engine.ini)"
     validations:
       required: true
 

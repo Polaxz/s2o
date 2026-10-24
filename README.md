@@ -16,6 +16,8 @@
 
 </div>
 
+Getting low FPS, stutter or flickering lights in Subnautica 2 on an older PC? s2o is a config-only optimisation (optimization) mod: drop-in Engine.ini tweaks that roughly triple frame rate on budget and older graphics cards while keeping the game's Lumen lighting. There's no mod loader and nothing injected, just one config file you can delete at any time.
+
 > [!NOTE]
 > All results and recommendations assume **TSR at 50% internal resolution (the TSR Performance preset)**.
 
@@ -27,6 +29,7 @@
 - [What s2o changes](#-what-s2o-changes)
 - [Tips](#-tips)
 - [Troubleshooting](#-troubleshooting)
+- [FAQ](#-faq)
 - [Report your results](#-report-your-results)
 - [Thanks](#-thanks)
 - [Legal](#-legal)
@@ -83,7 +86,7 @@ About **3× stock**. The game is GPU-bound (GPU ~92%, CPU under 50%). The Low in
 
 ## 💡 Lumen vs No Lumen
 
-![Lumen on vs off](docs/images/lumen-vs-no-lumen.webp)
+![Subnautica 2 starting area with Lumen lighting on vs off](docs/images/lumen-vs-no-lumen.webp)
 
 With Lumen off, nothing blocks the sky light indoors, so the blue-green underwater light floods rooms. The No-Lumen profile turns distance-field AO and SSAO back on and dims the sky light to 0.7× to limit this, but interiors still look washed out.
 
@@ -152,6 +155,50 @@ r.Lumen.Reflections.DownsampleFactor=2
 <br>
 
 A patch can change what some settings do. Delete `Engine.ini` to compare against stock, then open an issue.
+</details>
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><b>What are the best settings for Subnautica 2 on a low-end PC?</b></summary>
+
+<br>
+
+Use the **Lumen** profile, set the upscaler to **TSR** at **50%** resolution scale (TSR Performance), and choose the **Low** or **Medium** preset. On a GTX 1050 Ti that took the game from 9–11 FPS to 32–34 FPS standing still.
+</details>
+
+<details>
+<summary><b>Does it fix stuttering and flickering lights?</b></summary>
+
+<br>
+
+It removes the lighting and sun-ray flicker that happens while moving, and reduces stutter from shadow re-rendering and texture streaming. Shader-compilation stutter on first launch still happens and settles after a session or two.
+</details>
+
+<details>
+<summary><b>Will it work on my GPU?</b></summary>
+
+<br>
+
+It's tuned and tested on a GTX 1050 Ti. Cards in the same class (GTX 1650, GTX 1060, RX 570/580) should see similar gains. Cards with less than 4 GB of VRAM should use **Lumen-Lite**. Faster GPUs can use it too, but may prefer the game's own higher presets.
+</details>
+
+<details>
+<summary><b>Steam or Xbox / Microsoft Store?</b></summary>
+
+<br>
+
+Both. The Microsoft Store / Xbox app version keeps its config in `WinGDK` instead of `Windows` (see [Install](#-install)).
+</details>
+
+<details>
+<summary><b>Is it safe? Can I get banned?</b></summary>
+
+<br>
+
+s2o only changes graphics settings in your own config file. It doesn't touch game files or memory. See [Legal](#-legal).
 </details>
 
 ---
