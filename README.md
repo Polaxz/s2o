@@ -39,7 +39,7 @@
 
 | Profile | In-game preset | Standing still | Moving |
 |:--|:--:|:--:|:--:|
-| Stock game (no Engine.ini) | Medium | 9–11 | 5–9 |
+| Stock game (no custom Engine.ini) | Medium | 9–11 | 5–9 |
 | **Lumen** ⭐ | Medium | **32** (18–24) | **27–29** (13–15) |
 | **Lumen** ⭐ | Low | **33** (22–24) | **31** (18–20) |
 | Lumen Lite | Medium | 32 (15–17) | 27 (13–15) |
